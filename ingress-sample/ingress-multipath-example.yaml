@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: multi-path-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+   - http:
+      paths:
+      - path: /croc1
+        backend:
+          serviceName: croc-hunter-s1
+          servicePort: 80
+      - path: /croc2
+        backend:
+          serviceName: croc-hunter-s2
+          servicePort: 80
