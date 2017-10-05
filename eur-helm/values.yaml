@@ -16,19 +16,19 @@ image:
   tag: 0.1
   pullPolicy: IfNotPresent
 eurserservice:
-  name: eurekaservice
+  name: eurekaservicee
   type: ClusterIP
   containerPort: 8761
   url: eurekaservice:8761
   envVariableName: EUREKA_SERVICE_URL
   deploymentName: eureka
 eurcliservice:
-  name: eurekaclientservice
+  name: eurekaclientservicee
   type: ClusterIP
   containerPort: 8090
   deploymentName: eurekaclient
 service:
-  name: n
+  name: ne
   type: ClusterIP
   externalPort: 80
   internalPort: 80
